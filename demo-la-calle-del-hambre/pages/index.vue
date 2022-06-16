@@ -39,9 +39,9 @@ export default {
     --body-text-color: #585065;
     --secondary-color: #E7B65E;
     --btn-bg: white;
-    --body-text-size: 0.875rem;
+    --body-text-size: clamp(1rem, calc(1rem + ((1vw - 0.225rem) * 0.2564)), 1.25rem);
     --body-text-fw: 400;
-    --main-headings-size: 1.125rem;
+    --main-headings-size: clamp(1.375rem, calc(1.375rem + ((1vw - 0.225rem) * 1.4103)), 2.75rem);
     --main-headings-fw: 400;
     --card-bg: white;
 }
@@ -91,6 +91,13 @@ h2 {
 /*     Utility classes    */
 /**************************/
 
+button {
+    font-family: 'Lato', sans-serif;
+    color: black;
+    font-size: var(--body-text-size);
+    line-height: 1.5;
+}
+
 a.hero-category__item, 
 a:link.hero-category__item, 
 a:active.hero-category__item {
@@ -105,6 +112,7 @@ a:active.hero-category__item {
     text-decoration: none;
     border-radius: 5px;
 }
+
 
 
 

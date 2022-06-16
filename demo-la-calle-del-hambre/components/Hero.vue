@@ -13,17 +13,23 @@
             <p class="hero__hours">Horario: Lunes a Viernes 19 a 23 | Sabados y Domingos 17 a 00</p>
             <p class="hero__contact">Contacto: <a href="tel:221123456">221-123456</a> | <a href="tel:221456789">221-456789</a></p>
 
+    <!-- Categories should be rendered dynamically -->
             <div class="hero-category__container">
-                <a class="hero-category__item" href="#hamburguesas">Hamburguesas</a>
-                <a class="hero-category__item" href="#milanesas">Milanesas</a>
-                <a class="hero-category__item" href="#ensaladas">Ensaladas</a>
-                <a class="hero-category__item" href="#bebidas">Bebidas</a>
+                <CategoryButton buttonText="Hamburguesas" href="#hamburguesas"></CategoryButton>
+                <CategoryButton buttonText="Milanesas" href="#milanesas"></CategoryButton>
+                <CategoryButton buttonText="Ensaladas" href="#ensaladas"></CategoryButton>
+                <CategoryButton buttonText="Bebidas" href="#bebidas"></CategoryButton>
+                <CategoryButton buttonText="Hamburguesas" href="#hamburguesas"></CategoryButton>
+                <CategoryButton buttonText="Milanesas" href="#milanesas"></CategoryButton>
+                <CategoryButton buttonText="Ensaladas" href="#ensaladas"></CategoryButton>
+                <CategoryButton buttonText="Bebidas" href="#bebidas"></CategoryButton>
             </div>
 
         </section>
 </template>
 
 <script>
+
 export default {
   name: 'Hero',
 }
@@ -63,10 +69,37 @@ export default {
 
 .hero-category__container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
     gap: 0.5em;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
+/*Hide the scrollbar on the category section  */
+.hero-category__container::-webkit-scrollbar {
+    display:none;
+}
+
+/**************************/
+/*     Media Queries      */
+/**************************/
+
+@media screen and (max-width: 34.375rem) {
+    .hero__description,
+    .hero__hours,
+    .hero__contact {
+        text-align: left;
+    }
+}
+
+/**************Small screens***********************/
+@media screen and (max-width: 34.375rem) {
+       .hero {
+            padding: 4rem 1rem;
+       } 
+    }
 
 </style>
