@@ -74,8 +74,8 @@ export default {
     gap: 0.5em;
     overflow-x: auto;
     margin: 1.5rem 0;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;    /* Firefox */
 }
 
 /*Hide the scrollbar on the category section  */
@@ -83,9 +83,9 @@ export default {
     display:none;
 }
 
-/**************************/
-/*     Media Queries      */
-/**************************/
+/*********************************************/
+/*     Media Queries  for smaller screens    */
+/*********************************************/
 
 @media screen and (max-width: 34.375rem) {
     .hero__description,
@@ -95,11 +95,22 @@ export default {
     }
 }
 
-/**************Small screens***********************/
+
 @media screen and (max-width: 34.375rem) {
        .hero {
             padding: 4rem 1rem;
        } 
     }
+
+/*********************************************/
+/*     Media Queries  for smaller screens    */
+/*********************************************/
+    @media screen and (min-width: 48rem ) {
+        .hero-category__container {
+        flex-wrap: wrap;
+    }
+}
+
+    
 
 </style>

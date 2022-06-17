@@ -35,6 +35,8 @@ export default {
     text-decoration: none;
     border-radius: 5px;
     background-color: var(--secondary-color);
+    cursor: pointer;
+
 }
 
 
